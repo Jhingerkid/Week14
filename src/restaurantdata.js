@@ -1,7 +1,7 @@
 const data = [
   {
     name: "Space Taco Place",
-    id: 1,
+    id: 0,
     primaryColor: "#A87748",
     secondaryColor: "#6E8396",
     tertiaryColor: "#FDB403",
@@ -23,7 +23,7 @@ const data = [
   },
   {
     name: "Burger Emperor",
-    id: 2,
+    id: 1,
     primaryColor: "#F9EF05",
     secondaryColor: "#8E8F94",
     tertiaryColor: "#070707",
@@ -46,7 +46,7 @@ const data = [
   },
   {
     name: "Mynock Cuisine",
-    id: 3,
+    id: 2,
     primaryColor: "#55778C",
     secondaryColor: "#B6BFCB",
     tertiaryColor: "#424356",
