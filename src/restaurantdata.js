@@ -2,7 +2,7 @@ const data = [
   {
     name: "Space Taco Place",
     id: 0,
-    primaryColor: "#A87748",
+    primaryColor: "#B83448",
     secondaryColor: "#6E8396",
     tertiaryColor: "#FDB403",
     image: "https://i.ytimg.com/vi/k8mtniFe8vw/maxresdefault.jpg",
