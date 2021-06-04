@@ -2,9 +2,10 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import Dropdown from "./components/Dropdown";
 import styled from "styled-components";
-
 import data from "./restaurantdata";
 import Menu from "./components/Menu";
+import CartButton from "./components/CartButton";
+import Cart from "./components/Cart";
 
 const Application = styled.div`
   display: flex;
@@ -19,6 +20,8 @@ function App() {
   const [currentRestaurant, updateRestaurant] = useState("");
   const [currentTheme, updateTheme] = useState({});
   const [restaurantMenu, updateMenu] = useState({});
+  const [showCart, updateShowCart] = useState(false);
+  const [cartList, updateCartList] = useState([]);
   useEffect(() => {
     menuChange(updateMenu, currentRestaurant);
   }, [currentRestaurant]);
@@ -30,7 +33,21 @@ function App() {
         updateTheme={updateTheme}
         currentTheme={currentTheme}
       />
-      <Menu restaurantMenu={restaurantMenu} />
+      <Menu
+        currentTheme={currentTheme}
+        data={data}
+        cartList={cartList}
+        updateCartList={updateCartList}
+        restaurantMenu={restaurantMenu}
+      />
+      <CartButton updateShowCart={updateShowCart} />
+      <Cart
+        currentTheme={currentTheme}
+        cartList={cartList}
+        updateCartList={updateCartList}
+        updateShowCart={updateShowCart}
+        showCart={showCart}
+      />
     </Application>
   );
 }

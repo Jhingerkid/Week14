@@ -11,8 +11,7 @@ const MenuDisplay = styled.div`
   height: 65%;
   width: 60%;
   border: 5px solid black;
-  background-color: white;
-  margin-bottom: 8%;
+  background-color: ${(props) => props.secondaryColor};
 `;
 
 const Menu = (props) => {
@@ -21,9 +20,18 @@ const Menu = (props) => {
   }
   let menuList = props.restaurantMenu;
   return (
-    <MenuDisplay>
+    <MenuDisplay secondaryColor={props.currentTheme.secondaryColor}>
       {menuList.map((item) => {
-        return <MenuItem itemInfo={item} />;
+        return (
+          <MenuItem
+            currentTheme={props.currentTheme}
+            cartList={props.cartList}
+            updateCartList={props.updateCartList}
+            itemInfo={item}
+            key={item.id}
+            data={props.data}
+          />
+        );
       })}
     </MenuDisplay>
   );

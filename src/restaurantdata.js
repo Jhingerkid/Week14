@@ -10,14 +10,17 @@ const data = [
       {
         name: "Space Sized Taco",
         price: 5,
+        id: 0,
       },
       {
         name: "Quantum Burrito",
         price: 2.5,
+        id: 1,
       },
       {
         name: "Soda",
         price: 2,
+        id: 2,
       },
     ],
   },
@@ -33,14 +36,17 @@ const data = [
       {
         name: "Burger",
         price: 5.5,
+        id: 0,
       },
       {
         name: "Fries",
         price: 2.75,
+        id: 1,
       },
       {
         name: "Soda",
         price: 2.25,
+        id: 2,
       },
     ],
   },
@@ -55,14 +61,17 @@ const data = [
       {
         name: "Worm Soup",
         price: 5.5,
+        id: 0,
       },
       {
         name: "Potato",
         price: 2.75,
+        id: 1,
       },
       {
         name: "Soda",
         price: 2.25,
+        id: 2,
       },
     ],
   },
