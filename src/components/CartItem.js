@@ -19,6 +19,7 @@ function removeFromCart(info) {
 }
 
 const CartItem = (props) => {
+  console.log("item props", props);
   return (
     <StyledItem>
       <span>{props.name}</span>

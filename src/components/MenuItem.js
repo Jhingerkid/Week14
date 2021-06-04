@@ -22,23 +22,32 @@ const AddToCart = styled.button`
   cursor: pointer;
 `;
 
-function addCart(itemName, itemPrice, updateCartList, cartList) {
+function addCart(itemName, itemPrice, updateCartList, cartList, itemId) {
+  var dupe = false;
   let cartItem = {
     name: itemName,
     price: itemPrice.toFixed(2),
     quantity: 1,
+    id: itemId,
   };
+  console.log("item", cartItem);
   let currentCart = [...cartList];
-  currentCart.forEach((element) => {
-    if (element.name.includes(cartItem.name)) {
-      console.log(cartItem.name + " is already included");
+  console.log("known cart", currentCart);
+  const finalCart = currentCart.filter((item) => {
+    if (item.id === cartItem.id) {
+      item.quantity = item.quantity + 1;
+      dupe = true;
+      return item;
     } else {
-      console.log("lmao");
+      return item;
     }
   });
-
-  currentCart.push(cartItem);
-  updateCartList(currentCart);
+  if (dupe) {
+    updateCartList(finalCart);
+  } else {
+    currentCart.push(cartItem);
+    updateCartList(currentCart);
+  }
 }
 
 const MenuItem = (props) => {
@@ -58,7 +67,8 @@ const MenuItem = (props) => {
               props.itemInfo.name,
               props.itemInfo.price,
               props.updateCartList,
-              props.cartList
+              props.cartList,
+              props.itemInfo.id
             );
           }}
         >
@@ -70,3 +80,17 @@ const MenuItem = (props) => {
 };
 
 export default MenuItem;
+
+// console.log("item", cartItem);
+// let currentCart = [...cartList];
+// console.log("known cart", currentCart);
+// const finalCart = currentCart.filter((item) => {
+//   if (item.id === cartItem.id) {
+//     item.quantity = item.quantity + 1;
+//     return item;
+//   } else {
+//     return item;
+//   }
+// });
+// console.log("created final", finalCart);
+// currentCart.push(cartItem);

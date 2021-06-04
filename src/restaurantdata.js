@@ -36,17 +36,17 @@ const data = [
       {
         name: "Burger",
         price: 5.5,
-        id: 0,
+        id: 3,
       },
       {
         name: "Fries",
         price: 2.75,
-        id: 1,
+        id: 4,
       },
       {
         name: "Soda",
         price: 2.25,
-        id: 2,
+        id: 5,
       },
     ],
   },
@@ -61,17 +61,17 @@ const data = [
       {
         name: "Worm Soup",
         price: 5.5,
-        id: 0,
+        id: 6,
       },
       {
         name: "Potato",
         price: 2.75,
-        id: 1,
+        id: 7,
       },
       {
         name: "Soda",
         price: 2.25,
-        id: 2,
+        id: 8,
       },
     ],
   },
