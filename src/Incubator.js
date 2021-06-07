@@ -14,6 +14,7 @@ const Application = styled.div`
   justify-content: space-between;
   height: 100vh;
   background-image: url("https://styledme.com/wp-content/uploads/2020/08/star-wars-cantina-zoom-background.jpg");
+  background-size: cover;
 `;
 
 function App() {

@@ -5,7 +5,7 @@ import MenuItem from "./MenuItem";
 const MenuDisplay = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   overflow: auto;
   height: 65%;
